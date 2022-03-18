@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DevApp.Infra.Data.Repository
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
+    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity, new()
     {
         protected readonly AppDbContext Db;
         protected readonly DbSet<TEntity> DbSet;

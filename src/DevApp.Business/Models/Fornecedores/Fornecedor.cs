@@ -10,10 +10,7 @@ namespace DevApp.Business.Models.Fornecedores
 {
     public class Fornecedor : Entity
     {
-        public Fornecedor(Guid id) : base(id)
-        {
-        }
-
+        
 
         public string Nome { get; set; }
 

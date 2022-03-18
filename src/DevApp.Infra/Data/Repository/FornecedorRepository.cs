@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 
 namespace DevApp.Infra.Data.Repository
 {
-    class FornecedorRepository<TEntity> : Repository<Fornecedor>, IFornecedorRepository
+    class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
     {
+        public void Fornecedor()
+        {
+            throw new NotImplementedException();
+        }
+
         
+
         public Task<Fornecedor> ObterFornecedorEndereco(Guid id)
         {
             throw new NotImplementedException();

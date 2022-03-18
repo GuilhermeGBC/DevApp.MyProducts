@@ -13,7 +13,13 @@ namespace DevApp.Business.Core.Models
             Id = Guid.NewGuid();
         }
 
+        protected Entity()
+        {
+
+        }
+
         public Guid Id { get; set; }
-       
+
+
     }
 }

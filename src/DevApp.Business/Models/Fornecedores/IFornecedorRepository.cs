@@ -9,7 +9,7 @@ namespace DevApp.Business.Models.Fornecedores
 {
     public interface IFornecedorRepository : IRepository<Fornecedor>
     {
-        void Fornecedor();
+        
 
         //Métodos para fornecedor
 

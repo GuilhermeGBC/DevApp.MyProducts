@@ -9,10 +9,7 @@ namespace DevApp.Infra.Data.Repository
 {
     class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
     {
-        public void Fornecedor()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         
 

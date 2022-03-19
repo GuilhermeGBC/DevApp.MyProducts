@@ -25,12 +25,12 @@ namespace DevApp.Business.Models.Fornecedores
 
         public ICollection<Produto> Produtos { get; set; }
 
-        public bool Validacao() {
-            var validacao = new FornecedorValidation();
+        //public bool Validacao() {
+        //    var validacao = new FornecedorValidation();
 
-           var resultado = validacao.Validate(instance:this);
+        //   var resultado = validacao.Validate(instance:this);
 
-            return resultado.IsValid; //Retorna true caso a entidade estivesse 100% ok.
-        }
+        //    return resultado.IsValid; //Retorna true caso a entidade estivesse 100% ok.
+        //}
     }
 }

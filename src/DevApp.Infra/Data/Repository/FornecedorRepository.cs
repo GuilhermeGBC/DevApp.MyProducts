@@ -8,7 +8,7 @@ using DevApp.Business.Core.Models;
 
 namespace DevApp.Infra.Data.Repository
 {
-    class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
+   public class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
     {
 
 

@@ -1,4 +1,5 @@
 ﻿using DevApp.Business.Core.Models;
+using DevApp.Business.Models.Fornecedores.Validations;
 using DevApp.Business.Models.Produtos;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,14 @@ namespace DevApp.Business.Models.Fornecedores
 
         public bool Ativo { get; set; }
 
-
         public ICollection<Produto> Produtos { get; set; }
+
+        public bool Validacao() {
+            var validacao = new FornecedorValidation();
+
+           var resultado = validacao.Validate(instance:this);
+
+            return resultado.IsValid; //Retorna true caso a entidade estivesse 100% ok.
+        }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using DevApp.Business.Core.Models;
 using DevApp.Business.Models.Fornecedores;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevApp.Business.Models.Produtos
 {

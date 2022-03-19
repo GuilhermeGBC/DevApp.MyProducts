@@ -10,12 +10,9 @@ namespace DevApp.Business.Models.Produtos
 {
     public class Produto : Entity
     {
-        public Produto(Guid id) : base(id)
-        {
-        }
+
 
         public Guid FornecedorId { get; set; }
-
 
         public string Nome { get; set; }
 

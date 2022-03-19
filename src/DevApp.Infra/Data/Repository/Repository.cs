@@ -16,7 +16,7 @@ namespace DevApp.Infra.Data.Repository
         protected readonly AppDbContext Db;
         protected readonly DbSet<TEntity> DbSet;
 
-        protected Repository()
+        protected Repository(AppDbContext context)
         {
             Db = new AppDbContext();
             DbSet = Db.Set<TEntity>();

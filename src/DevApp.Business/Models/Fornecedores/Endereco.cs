@@ -9,10 +9,7 @@ namespace DevApp.Business.Models.Fornecedores
 {
     public class Endereco : Entity
     {
-        public Endereco(Guid id) : base(id)
-        {
-        }
-
+        
         public string Logradouro { get; set; }
 
         public string Numero { get; set; }

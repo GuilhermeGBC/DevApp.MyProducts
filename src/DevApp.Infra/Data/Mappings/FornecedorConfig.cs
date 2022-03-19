@@ -13,7 +13,7 @@ namespace DevApp.Infra.Data.Mappings
     class FornecedorConfig : EntityTypeConfiguration<Fornecedor>
     {
         public FornecedorConfig()
-        {
+        {//FLUENT API
             HasKey(f => f.Id); //Chave primária
 
             Property(f => f.Nome) //Não pode ser nulo no banco

@@ -29,6 +29,7 @@ namespace DevApp.Infra.Data.Mappings
                 .IsFixedLength();
 
             Property(c => c.Complemento)
+                .IsOptional()
                 .HasMaxLength(200);
 
             Property(c => c.Bairro)

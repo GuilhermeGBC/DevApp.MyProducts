@@ -13,7 +13,6 @@ namespace DevApp.Infra.Data.Repository
 
         public ProdutoRepository(AppDbContext context) : base(context) { }
 
-
         public async Task<Produto> ObterProdutoFornecedor(Guid id) //Obter um produto e fornecedor
         {
             return await Db.Produtos.AsNoTracking().Include(f => f.Fornecedor)

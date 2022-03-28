@@ -11,7 +11,6 @@ namespace DevApp.Infra.Data.Repository
    public class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
     {
 
-
         public FornecedorRepository(AppDbContext context) : base(context) { }
 
         public async Task<Fornecedor> ObterFornecedorEndereco(Guid id)

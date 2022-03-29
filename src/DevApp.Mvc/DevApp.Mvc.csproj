@@ -269,11 +269,17 @@
     <Content Include="Views\Produtos\Details.cshtml" />
     <Content Include="Views\Produtos\Edit.cshtml" />
     <Content Include="Views\Produtos\Index.cshtml" />
+    <Content Include="Views\Fornecedores\Index.cshtml" />
+    <Content Include="Views\Fornecedores\Create.cshtml" />
+    <Content Include="Views\Shared\_ErrorSummary.cshtml" />
+    <Content Include="Views\Fornecedores\Delete.cshtml" />
+    <Content Include="Views\Fornecedores\Details.cshtml" />
+    <Content Include="Views\Fornecedores\Edit.cshtml" />
+    <Content Include="Views\Fornecedores\_Endereco.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Views\Fornecedores\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

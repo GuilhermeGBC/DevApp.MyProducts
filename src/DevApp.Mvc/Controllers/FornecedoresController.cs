@@ -37,6 +37,16 @@ namespace DevApp.Mvc.Controllers
             return View(_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()));
         }
 
+        [Route("dados-do-fornecedor/{id:guid}")] //Exibindo os detalhes dos fornecedores.
+        public async Task<ActionResult> Details(Guid id)
+        {
+            var fornecedorVM = await ObterFornecedorEndereco(id);
+
+            if (fornecedorVM == null) return HttpNotFound();
+
+            return View(fornecedorVM);
+        }
+
         //GET
         [HttpGet]
         [Route("novo-fornecedor")]
@@ -61,8 +71,6 @@ namespace DevApp.Mvc.Controllers
 
             return RedirectToAction("Index");
         }
-
-
 
         //GET
         [HttpGet]

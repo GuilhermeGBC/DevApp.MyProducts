@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DevApp.Mvc.ViewModels.FornecedorViewModel>
+
+@{
+    ViewBag.Title = "Lista de Fornecedores";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+<p>
+    <a class="btn btn-info" href="@Url.Action("Create", controllerName: "Fornecedores")">
+        Novo Fornecedor
+    </a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @*Buscando item a item do FORNECEDOR*@
+        @foreach (var item in Model)
+         {
+            <tr>
+                <td>
+                    @Html.DisplayFor(expression: modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(expression: modelItem => item.Documento)
+                </td>
+                <td>
+                    @Html.DisplayFor(expression: modelItem => item.Ativo)
+                </td>
+                <td class="text-right">                                                                                                                                                            @*Lembrando que tivemos que criar a o método na controller de exibir detalhes!!*@
+                    <a class="btn btn-warning" href="@Url.Action("Details", controllerName:"Fornecedores", routeValues: new {id = item.Id })"><span class="glyphicon glyphicon-search"></span></a> @*routeValues para mostrar o id do fornecedor que tem que ser o mesmo parâmetro que está na action, assim sabemos qual fornecedor iremos editar.*@
+                    <a class="btn btn-warning" href="@Url.Action("Edit", controllerName:"Fornecedores", routeValues: new {id = item.Id })"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a class="btn btn-warning" href="@Url.Action("Delete", controllerName:"Fornecedores", routeValues: new {id = item.Id })"><span class="glyphicon glyphicon-trash"></span></a>
+                </td>
+            </tr>
+         }
+    </tbody>
+</table>
+
+
